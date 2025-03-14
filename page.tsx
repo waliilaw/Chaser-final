@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle2, CreditCard, LineChart, Lock, Wallet } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -34,9 +35,9 @@ export default function Home() {
           <svg className="absolute h-full w-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="grad1" x1="1" y1="0" x2="0" y2="0">
-                <stop offset="0%" stopColor="#22d3ee" stopOpacity="0" />
-                <stop offset="50%" stopColor="#22d3ee" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
+                <stop offset="25%" stopColor="first" stopOpacity="0" />
+                <stop offset="50%" stopColor="first" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="first" stopOpacity="0" />
               </linearGradient>
               <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
                 <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0" />
@@ -58,7 +59,7 @@ export default function Home() {
               d="M 100 100 Q 300 0 500 100 T 900 100"
               fill="none"
               stroke="url(#grad1)"
-              strokeWidth="1"
+              strokeWidth="2"
             />
             <motion.path
               initial={{ pathLength: 0, opacity: 0 }}
@@ -74,7 +75,7 @@ export default function Home() {
               d="M 0 200 Q 200 100 400 200 T 800 200"
               fill="none"
               stroke="url(#grad2)"
-              strokeWidth="1"
+              strokeWidth="5"
             />
             {/* Bottom Curves */}
             <motion.path
@@ -91,7 +92,7 @@ export default function Home() {
               d="M 100 600 Q 300 500 500 600 T 900 600"
               fill="none"
               stroke="url(#grad1)"
-              strokeWidth="1"
+              strokeWidth="5"
             />
           </svg>
 
@@ -122,7 +123,7 @@ export default function Home() {
                   top: `${15 + i * 10}%`,
                   height: "1px",
                   width: "100%",
-                  background: `linear-gradient(90deg, transparent, ${i % 2 === 0 ? "#22d3ee" : "#8b5cf6"}60, transparent)`,
+                  background: `linear-gradient(90deg, transparent, ${i % 2 === 0 ? "first" : "first"}60, transparent)`,
                 }}
               />
             ))}
@@ -153,6 +154,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="mx-auto max-w-3xl space-y-8"
           >
+            <Image src="/icon.png" width={150} height={150} alt="icon" className="relative left-1/3 pl-5 md:w-64 md:h-64"/>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-black">
               Invest Smartly
             </h1>
