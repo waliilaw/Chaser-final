@@ -20,7 +20,7 @@ export default function Home() {
             <Link className="hidden text-sm  hover:text-neutral-400 sm:block" href="/login">
               Iniciar Sesión
             </Link>
-            <Button className="bg-gradient-to-r from-first to-white text-black hover:from-black hover:to-black hover:text-white font-bold rounded-full border border-black">
+            <Button className="bg-gradient-to-r from-first to-white text-black hover:from-black hover:to-black hover:text-white font-bold rounded-full border-2 border-black">
               Invest
             </Button>
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
               vez de horas
             </p>
             <div className="flex justify-center space-x-4">
-              <Button className="bg-gradient-to-r hover:from-white hover:to-white text-lg text-black font-bold from-white to-first rounded-lg">
+              <Button className="bg-gradient-to-r hover:from-white hover:to-white text-lg text-black font-bold from-white to-first rounded-xl border-2 border-black">
                 Get Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
