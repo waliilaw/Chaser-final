@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black font-bold">
       {/* Navigation */}
-      <header className="fixed top-0 z-50 w-full border-b border-black bg-black/10 backdrop-blur-xl">
+      <header className="fixed top-0 z-50 w-full border-b-2 border-black bg-black/10 backdrop-blur-xl">
         <div className="container flex h-20 items-center justify-between px-4">
           <Link className="flex items-center space-x-2 font-bold" href="/">
             <Wallet className="h-8 w-8 text-black font-extrabold" />
