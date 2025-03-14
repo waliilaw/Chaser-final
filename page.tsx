@@ -155,9 +155,12 @@ export default function Home() {
             className="mx-auto max-w-3xl space-y-8"
           >
             <Image src="/icon.png" width={150} height={150} alt="icon" className="relative left-1/3 pl-5 md:w-64 md:h-64"/>
+            <div className="flex items-center justify-center space-x-4 md:space-x-5">
+            <Image src="/stars.png" width={30} height={30} alt="star" className="md:w-12 md:h-12 "/>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-black">
               Invest Smartly
             </h1>
+            </div>
             <p className="mx-auto max-w-2xl text-black sm:text-xl">
               Nuestra plataforma le permite a tu negocio tener acceso a rieles de pagos internacionales en segundos en
               vez de horas
