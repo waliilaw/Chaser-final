@@ -260,15 +260,15 @@ export default function Home() {
       <footer className="border-none bg-black py-8">
         <div className="container flex flex-col items-center justify-between space-y-4 px-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
-            <Wallet className="h-6 w-6 text-first" />
-            <span className="font-bold text-first">Chaser</span>
+            <Wallet className="h-6 w-6 text-white" />
+            <span className="font-bold text-white">Chaser</span>
           </div>
           <p className="text-sm text-gray-400">© {new Date().getFullYear()} Ares. Todos los derechos reservados.</p>
           <div className="flex space-x-6">
-            <Link className="text-sm text-gray-400 hover:text-cyan-400" href="#">
+            <Link className="text-sm text-gray-400 hover:text-white" href="#">
               Privacidad
             </Link>
-            <Link className="text-sm text-gray-400 hover:text-cyan-400" href="#">
+            <Link className="text-sm text-gray-400 hover:text-white" href="#">
               Términos
             </Link>
           </div>
