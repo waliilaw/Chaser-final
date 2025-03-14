@@ -10,18 +10,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black font-bold">
       {/* Navigation */}
-      <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/20 backdrop-blur-xl">
-        <div className="container flex h-16 items-center justify-between px-4">
+      <header className="fixed top-0 z-50 w-full border-b border-black bg-black/10 backdrop-blur-xl">
+        <div className="container flex h-20 items-center justify-between px-4">
           <Link className="flex items-center space-x-2 font-bold" href="/">
-            <Wallet className="h-6 w-6 text-black font-extrabold" />
-            <span>Ares</span>
+            <Wallet className="h-8 w-8 text-black font-extrabold" />
+            <span className="text-2xl font-extrabold">Chaser</span>
           </Link>
           <div className="flex items-center space-x-4">
             <Link className="hidden text-sm  hover:text-neutral-400 sm:block" href="/login">
               Iniciar Sesión
             </Link>
             <Button className="bg-gradient-to-r from-first to-white text-black hover:from-black hover:to-black hover:text-white font-bold rounded-full border border-black">
-              Comenzar
+              Invest
             </Button>
           </div>
         </div>
@@ -261,7 +261,7 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-between space-y-4 px-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
             <Wallet className="h-6 w-6 text-second" />
-            <span className="font-bold">Ares</span>
+            <span className="font-bold">Chaser</span>
           </div>
           <p className="text-sm text-gray-400">© {new Date().getFullYear()} Ares. Todos los derechos reservados.</p>
           <div className="flex space-x-6">
