@@ -2,9 +2,12 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
+  title: 'Chaser',
   description: 'Created with v0',
   generator: 'v0.dev',
+  icons:{
+    icon:"/favicon.ico"
+  }
 }
 
 export default function RootLayout({
