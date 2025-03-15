@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 
 export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div className={cn("flex flex-col gap-6 border  border-black p-10 rounded-lg py-10 bg-transparent/5", className)} {...props}>
+    <div className={cn("flex flex-col gap-6 border  border-black p-10 rounded-lg py-10 bg-white/55 backdrop-blur-md", className)} {...props}>
       <form>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col items-center gap-2">

@@ -15,10 +15,10 @@ function HomePage(){
 <button onClick={HomePage} className="border-2 border-black absolute top-2 left-3 bg-neutral-300 px-4 py-2 font-bold hover:text-white hover:bg-black rounded-full">
 Home
 </button>
-    <div className="w-full max-w-sm">
-      </div>
-      <Back />
-<LoginForm />
+    <div className="w-full max-w-sm relative z-10">
+      <LoginForm />
+    </div>
+    <Back  />
     </div>
 
     </>
