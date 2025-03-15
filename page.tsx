@@ -5,8 +5,16 @@ import { ArrowRight, CheckCircle2, CreditCard, LineChart, Lock, Wallet } from "l
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
+
+  const router = useRouter()
+
+  function loginDirecter(){
+    router.push('/login')
+  }
+
   return (
     <div className="min-h-screen bg-white text-black font-bold">
       {/* Navigation */}
@@ -20,7 +28,7 @@ export default function Home() {
             <Link className="hidden text-sm  hover:text-neutral-400 sm:block" href="/login">
               Iniciar Sesión
             </Link>
-            <Button className="bg-gradient-to-r from-first to-white text-black hover:from-black hover:to-black hover:text-white font-bold rounded-full border-2 border-black">
+            <Button onClick={loginDirecter} className="bg-gradient-to-r from-first to-white text-black hover:from-black hover:to-black hover:text-white font-bold rounded-full border-2 border-black">
               Invest
             </Button>
           </div>
@@ -166,11 +174,11 @@ export default function Home() {
               vez de horas
             </p>
             <div className="flex justify-center space-x-4">
-              <Button className="bg-gradient-to-r hover:from-white hover:to-white text-lg text-black font-bold from-white to-first rounded-xl border-2 border-black">
+              <Button onClick={loginDirecter} className="bg-gradient-to-r hover:from-white hover:to-white text-lg text-black font-bold from-white to-first rounded-xl border-2 border-black">
                 Get Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="border-white/10 text-lg rounded-3xl text-black font-bold hover:bg-black hover:text-white ">
+              <Button onClick={loginDirecter} variant="outline" className="border-white/10 text-lg rounded-3xl text-black font-bold hover:bg-black hover:text-white ">
                 Details
               </Button>
             </div>
