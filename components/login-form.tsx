@@ -1,12 +1,17 @@
 import type React from "react"
 import { GalleryVerticalEnd } from "lucide-react"
-
+import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<"div">) {
+  const router = useRouter()
+function HomePage(){
+    router.push('/')
+}
+
   return (
     <div className={cn("flex flex-col gap-6 border  border-black p-10 rounded-lg py-10 bg-white/55 backdrop-blur-md", className)} {...props}>
       <form>
@@ -20,10 +25,10 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
             </a>
             <h1 className="text-xl font-bold">Welcome to Chaser Inc.</h1>
             <div className="text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <a href="#" className="underline underline-offset-4">
-                Sign up
-              </a>
+               Go Back {" "}
+              <button onClick={HomePage} className="underline underline-offset-4">
+                Home
+              </button>
             </div>
           </div>
           <div className="flex flex-col gap-6">
