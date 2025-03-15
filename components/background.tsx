@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion' 
 
  export default function Back() {
-  return(  <div className="absolute inset-0 z-[1]">
+  return(  <div className=" inset-0 z-[1]">
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

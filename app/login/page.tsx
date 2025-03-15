@@ -1,4 +1,5 @@
 'use client'
+import Back from "@/components/background"
 import { LoginForm } from "../../components/login-form"
 import {motion} from 'framer-motion'
 import { useRouter } from "next/navigation"
@@ -14,11 +15,12 @@ function HomePage(){
 <button onClick={HomePage} className="border-2 border-black absolute top-2 left-3 bg-neutral-300 px-4 py-2 font-bold hover:text-white hover:bg-black rounded-full">
 Home
 </button>
-     
     <div className="w-full max-w-sm">
-        <LoginForm />
       </div>
+      <Back />
+<LoginForm />
     </div>
+
     </>
   )
 }
