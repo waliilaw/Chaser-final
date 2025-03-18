@@ -44,7 +44,7 @@ export default function LoginPage() {
 
       toast({
         title: "Login successful",
-        description: "Welcome back to FinanceAI!",
+        description: "Welcome back to ChaserAI!",
       })
 
       router.push("/dashboard")
@@ -83,7 +83,7 @@ export default function LoginPage() {
           <div className="bg-background/80 backdrop-blur-sm p-8 rounded-lg shadow-sm border">
             <div className="mb-8 text-center">
               <h1 className="text-2xl font-bold">Welcome back</h1>
-              <p className="text-muted-foreground">Sign in to your FinanceAI account</p>
+              <p className="text-muted-foreground">Sign in to your ChaserAI account</p>
             </div>
 
             <Form {...form}>

@@ -12,7 +12,7 @@ from finance_analyzer import FinanceAnalyzer
 from chatbot import FinanceChatbot
 
 # Initialize FastAPI app
-app = FastAPI(title="Finance AI API", description="API for AI-powered finance management")
+app = FastAPI(title="Chaser AI API", description="API for AI-powered finance management")
 
 # Add CORS middleware
 app.add_middleware(
