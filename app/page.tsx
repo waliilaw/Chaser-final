@@ -62,7 +62,9 @@ export default function Home() {
       {/* Features Section */}
       <section id="features" className="bg-muted/50 py-16">
         <div className="container mx-auto px-4">
+           <Image src={'/arrow.png'} width={50} height={50}  alt="arrow"  className="absolute  rotate-90 "/> 
           <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-background p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
