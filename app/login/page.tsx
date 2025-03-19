@@ -60,8 +60,8 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="container mx-auto px-4 py-8 ">
         <Link
           href="/"
           className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground mb-8"
@@ -73,7 +73,7 @@ export default function LoginPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
           <div className="relative h-[300px] hidden md:block">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rolling-CisHOWaDKgeZ8Hzt0kwyVcqV8gGjXD.png"
+                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sleek-1Z1R37uQzn9KFFjuNZD9ThbXkTOAhA.png"
               alt="Login illustration"
               fill
               className="object-contain"

@@ -3,13 +3,11 @@ import Image from "next/image"
 import { ArrowRight, BarChart3, MessageSquare, PieChart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-
 export default function Home() {
-
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <header className="container mx-auto px-4 py-6 md:py-8">
+      <header className="container mx-auto px-4 py-6 md:py-8 relative">
         <nav className="flex justify-between items-center mb-16">
           <div className="flex items-center gap-2">
             <PieChart className="h-6 w-6 text-primary" />
@@ -27,16 +25,28 @@ export default function Home() {
           </div>
         </nav>
 
+        {/* Dollar sign doodle */}
+        <div className="absolute top-20 right-10 md:right-20 w-16 h-16 md:w-24 md:h-24 opacity-10 rotate-12">
+          <Image src="/images/dollar-sign.png" alt="Dollar sign" width={100} height={100} className="w-full h-full" />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
+          <div className="relative">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Manage your finances with AI</h1>
+
+            {/* Star doodle */}
+            <div className="absolute -top-10 -left-5 w-12 h-12 opacity-10">
+              <Image src="/images/star.png" alt="Star" width={50} height={50} className="w-full h-full" />
+            </div>
+
             <p className="text-lg text-muted-foreground mb-8">
               Track expenses, analyze spending patterns, and get personalized financial advice with our AI-powered
               finance management app.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/register">
-                <Button size="lg" className="backdrop-blur-sm bg-primary/90 hover:bg-primary/80">
+              <Link href="/login">
+                <Button size="lg" className="backdrop-blur-sm bg-primary/90 hover:bg-primary/80"
+>
                   Get Started <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -55,14 +65,31 @@ export default function Home() {
               className="object-contain"
               priority
             />
+
+            {/* Swirly arrow doodle */}
+            <div className="absolute -bottom-10 -left-10 w-20 h-20 opacity-15 rotate-45">
+              <Image
+                src="/images/swirly-arrow.png"
+                alt="Swirly arrow"
+                width={80}
+                height={80}
+                className="w-full h-full -rotate-12"
+              />
+            </div>
           </div>
         </div>
       </header>
 
       {/* Features Section */}
-      <section id="features" className="bg-muted/50 py-16">
+      <section id="features" className="bg-muted/50 py-16 relative">
         <div className="container mx-auto px-4">
-           <Image src={'/arrow.png'} width={50} height={50}  alt="arrow"  className="absolute  rotate-90 "/> 
+          {/* Star doodle in features section */}
+          <div className="absolute top-10 right-10 w-16 h-16 opacity-10 rotate-12">
+            <Image src="/images/star.png" alt="Star" width={60} height={60} className="w-full h-full" />
+          </div>
+          <div className="absolute top-28 left-10 w-10 h-10 opacity-0 md:opacity-10 rotate-12">
+            <Image src="/images/star.png" alt="Star" width={60} height={60} className="w-full h-full" />
+          </div>
           <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -98,10 +125,14 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-16">
+      <section className="py-16 relative">
         <div className="container mx-auto px-4">
+          {/* Dollar sign doodle in testimonial */}
+          <div className="absolute bottom-10 left-10 w-16 h-16 opacity-10 -rotate-12">
+            <Image src="/images/dollar-sign.png" alt="Dollar sign" width={60} height={60} className="w-full h-full" />
+          </div>
+
           <div className="flex flex-col md:flex-row items-center gap-8">
-    
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">What Our Users Say</h2>
               <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-muted-foreground mb-6">
@@ -110,13 +141,37 @@ export default function Home() {
               </blockquote>
               <p className="font-semibold">- Sarah Johnson, Small Business Owner</p>
             </div>
+
+         
+             
+
+              {/* Swirly arrow in testimonial */}
+              <div className="absolute -top-10 right-0 w-16 h-16 opacity-15 rotate-180">
+                <Image
+                  src="/images/swirly-arrow.png"
+                  alt="Swirly arrow"
+                  width={60}
+                  height={60}
+                  className="w-full h-full"
+                />
+
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary/5 py-16">
+      <section className="bg-primary/5 py-16 relative">
         <div className="container mx-auto px-4 text-center">
+          {/* Star doodle in CTA */}
+          <div className="absolute top-10 left-3/4 w-12 h-12 opacity-10 rotate-45">
+            <Image src="/images/star.png" alt="Star" width={50} height={50} className="w-full h-full" />
+          </div>
+          
+          <div className="absolute top-10 left-60 w-24 h-24 md:opacity-10 opacity-0 rotate-90">
+            <Image src="/images/swirly-arrow.png" alt="Star" width={50} height={50} className="w-full h-full" />
+          </div>
+
           <div className="relative h-[200px] w-full mb-8">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sleek-1Z1R37uQzn9KFFjuNZD9ThbXkTOAhA.png"

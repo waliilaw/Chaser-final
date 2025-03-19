@@ -1,5 +1,7 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import "./globals.css"
+
 
 export const metadata: Metadata = {
   title: 'ChaserAI',
@@ -10,14 +12,16 @@ export const metadata: Metadata = {
   }
 }
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body>{children}</body>
     </html>
   )
 }
+
