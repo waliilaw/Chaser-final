@@ -64,7 +64,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-background p-6 rounded-lg shadow-sm">
+            <div className="bg-background p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <BarChart3 className="h-6 w-6 text-primary" />
               </div>
@@ -73,7 +73,7 @@ export default function Home() {
                 Categorize and track your expenses over time with intuitive visualizations.
               </p>
             </div>
-            <div className="bg-background p-6 rounded-lg shadow-sm">
+            <div className="bg-background p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <MessageSquare className="h-6 w-6 text-primary" />
               </div>
@@ -82,7 +82,7 @@ export default function Home() {
                 Get personalized financial advice and insights from our AI chatbot.
               </p>
             </div>
-            <div className="bg-background p-6 rounded-lg shadow-sm">
+            <div className="bg-background p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <PieChart className="h-6 w-6 text-primary" />
               </div>
