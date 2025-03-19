@@ -19,7 +19,7 @@ export default function Home() {
                 Login
               </Button>
             </Link>
-            <Link href="/register">
+            <Link href="/login">
               <Button className="backdrop-blur-sm bg-primary/90 hover:bg-primary/80">Sign Up</Button>
             </Link>
           </div>
@@ -184,7 +184,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join thousands of users who have improved their financial health with ChaserAI.
           </p>
-          <Link href="/register">
+          <Link href="/login">
             <Button size="lg" className="backdrop-blur-sm bg-primary/90 hover:bg-primary/80">
               Get Started Today
             </Button>
