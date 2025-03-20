@@ -26,7 +26,6 @@ export default function DashboardPage() {
         setIsLoading(false)
       }
     }
-
     loadData()
   }, [])
 

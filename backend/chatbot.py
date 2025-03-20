@@ -101,7 +101,7 @@ class FinanceChatbot:
                 amounts.append(np.random.uniform(10, 150))
         
         # Create merchants based on categories
-
+        merchants = []
         for category in random_categories:
             if category == "Housing":
                 merchants.append(np.random.choice(["Apartment Inc", "Rental Co", "Mortgage Bank"]))

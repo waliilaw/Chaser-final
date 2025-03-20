@@ -93,7 +93,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-background p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-background p-6 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
               <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <BarChart3 className="h-6 w-6 text-primary" />
               </div>
@@ -132,7 +132,7 @@ export default function Home() {
             <Image src="/images/dollar-sign.png" alt="Dollar sign" width={60} height={60} className="w-full h-full" />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">What Our Users Say</h2>
               <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-muted-foreground mb-6">

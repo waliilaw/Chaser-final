@@ -39,6 +39,7 @@ export default function DashboardLayout({
   const router = useRouter()
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(true)
 
   useEffect(() => {
     setMounted(true)
@@ -48,11 +49,18 @@ export default function DashboardLayout({
     return null
   }
 
-  
+  const handleSidebarClose = () => {
+    setSidebarOpen(false)
+  }
+
+  const handleSidebarOpen = () => {
+    setSidebarOpen(true)
+  }
+
   return (
     <div className="flex h-screen overflow-hidden">
-      <SidebarProvider defaultOpen={true}>
-        <Sidebar variant="sidebar" collapsible="icon">
+      <SidebarProvider defaultOpen={sidebarOpen}>
+        <Sidebar variant="sidebar" collapsible="icon" open={sidebarOpen} onOpenChange={setSidebarOpen}>
           <SidebarHeader>
             <div className="flex items-center gap-2 px-4 py-2">
               <PieChart className="h-6 w-6 text-primary" />
@@ -63,58 +71,58 @@ export default function DashboardLayout({
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard"} tooltip="Dashboard">
-                  <a onClick={() => router.push("/dashboard")}>
+                  <div onClick={() => { router.push("/dashboard"); handleSidebarClose(); }}>
                     <Home />
                     <span>Dashboard</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/expenses"} tooltip="Expenses">
-                  <a onClick={() => router.push("/dashboard/expenses")}>
+                  <div onClick={() => { router.push("/dashboard/expenses"); handleSidebarClose(); }}>
                     <BarChart3 />
                     <span>Expenses</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/budget"} tooltip="Budget">
-                  <a onClick={() => router.push("/dashboard/budget")}>
+                  <div onClick={() => { router.push("/dashboard/budget"); handleSidebarClose(); }}>
                     <PieChart />
                     <span>Budget</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/transactions"} tooltip="Transactions">
-                  <a onClick={() => router.push("/dashboard/transactions")}>
+                  <div onClick={() => { router.push("/dashboard/transactions"); handleSidebarClose(); }}>
                     <CreditCard />
                     <span>Transactions</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/accounts"} tooltip="Accounts">
-                  <a onClick={() => router.push("/dashboard/accounts")}>
+                  <div onClick={() => { router.push("/dashboard/accounts"); handleSidebarClose(); }}>
                     <Wallet />
                     <span>Accounts</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/reports"} tooltip="Reports">
-                  <a onClick={() => router.push("/dashboard/reports")}>
+                  <div onClick={() => { router.push("/dashboard/reports"); handleSidebarClose(); }}>
                     <LineChart />
                     <span>Reports</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/chat"} tooltip="AI Assistant">
-                  <a onClick={() => router.push("/dashboard/chat")}>
+                  <div onClick={() => { router.push("/dashboard/chat"); handleSidebarClose(); }}>
                     <MessageSquare />
                     <span>AI Assistant</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -123,34 +131,34 @@ export default function DashboardLayout({
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/notifications"} tooltip="Notifications">
-                  <a onClick={() => router.push("/dashboard/notifications")}>
+                  <div onClick={() => { router.push("/dashboard/notifications"); handleSidebarClose(); }}>
                     <Bell />
                     <span>Notifications</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/settings"} tooltip="Settings">
-                  <a onClick={() => router.push("/dashboard/settings")}>
+                  <div onClick={() => { router.push("/dashboard/settings"); handleSidebarClose(); }}>
                     <Settings />
                     <span>Settings</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/profile"} tooltip="Profile">
-                  <a onClick={() => router.push("/dashboard/profile")}>
+                  <div onClick={() => { router.push("/dashboard/profile"); handleSidebarClose(); }}>
                     <User />
                     <span>John Doe</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild tooltip="Logout">
-                  <a onClick={() => router.push("/")}>
+                  <div onClick={() => { router.push("/"); handleSidebarClose(); }}>
                     <LogOut />
                     <span>Logout</span>
-                  </a>
+                  </div>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -160,7 +168,7 @@ export default function DashboardLayout({
           <div className="flex flex-col h-full">
             <header className="border-b bg-background/80 backdrop-blur-sm p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <SidebarTrigger />
+                <SidebarTrigger onClick={handleSidebarOpen} />
                 <h1 className="text-xl font-semibold">
                   {pathname === "/dashboard" && "Dashboard"}
                   {pathname === "/dashboard/expenses" && "Expenses"}
